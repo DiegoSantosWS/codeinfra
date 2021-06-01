@@ -1,0 +1,29 @@
+{
+  "database_password": {
+    "sensitive": true,
+    "type": "string",
+    "value": "b2yz3fb9063wbuj8"
+  },
+  "database_uri": {
+    "sensitive": true,
+    "type": "string",
+    "value": "postgresql://doadmin:yy2y76cxp1oa4fdr@postgres-cluster-do-user-1423175-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require"
+  },
+  "ip_do_droplet": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string"
+      ]
+    ],
+    "value": [
+      "165.227.83.9"
+    ]
+  },
+  "load_balancer_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "164.90.252.22"
+  }
+}
