@@ -90,7 +90,7 @@ variable "firewall_name" {
 variable "troubleshooting" {
   type        = bool
   description = "liberar acesso ao droplets na porta 22"
-  default     = false
+  default     = true
 }
 
 variable "domain_name" {
