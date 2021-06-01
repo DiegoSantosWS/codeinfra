@@ -6,7 +6,7 @@ variable "do_token" {
 variable "droplet_image" {
   type        = string
   description = "Base image from droplet"
-  default     = "packer-1622517100"
+  default     = "ubuntu-20-04-x64"
 }
 
 variable "droplet_region" {
