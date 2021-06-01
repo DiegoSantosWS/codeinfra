@@ -29,3 +29,5 @@ override.tf.json
 # example: *tfplan*
 access.md
 *.tfvars
+output
+output.json
