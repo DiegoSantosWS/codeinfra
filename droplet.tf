@@ -16,9 +16,7 @@ resource "digitalocean_droplet" "web" {
 
   provisioner "remote-exec" {
     inline = [
-      "curl -fsSL https://get.docker.com | sh",
-      "docker run -d -p 80:8080 diegosantosws/blog",
-      # "docker run -d -p 80:80 nginx"
+      "curl -fsSL https://get.docker.com | sh"
     ]
 
     connection {
