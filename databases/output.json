@@ -1,0 +1,12 @@
+{
+  "database_password": {
+    "sensitive": true,
+    "type": "string",
+    "value": "pgace6jvzdpzo27y"
+  },
+  "database_uri": {
+    "sensitive": true,
+    "type": "string",
+    "value": "postgresql://doadmin:syofs9qofxqgv8vi@postgres-cluster-do-user-1423175-0.b.db.ondigitalocean.com:25060/defaultdb?sslmode=require"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ip_do_droplet": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string"
+      ]
+    ],
+    "value": [
+      "143.244.150.79"
+    ]
+  }
+}
