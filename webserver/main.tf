@@ -1,3 +1,16 @@
+provider "digitalocean" {
+  token = var.do_token
+}
+
+terraform {
+  required_version = ">= 0.15.4"
+  required_providers {
+    digitalocean = {
+      source  = "digitalocean/digitalocean"
+      version = "~> 2.9.0"
+    }
+  }
+}
 
 resource "digitalocean_droplet" "web" {
   image    = var.droplet_image
@@ -27,6 +40,3 @@ resource "digitalocean_droplet" "web" {
   }
   count = length(var.droplet_environmets)
 }
-
-
-

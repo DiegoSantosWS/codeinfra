@@ -1,4 +1,4 @@
-resource "digitalocean_firewall" "web" {
+resource "digitalocean_firewall" "blog" {
   name        = var.firewall_name
   droplet_ids = digitalocean_droplet.web[*].id
 
@@ -30,14 +30,5 @@ resource "digitalocean_firewall" "web" {
     protocol              = "udp"
     port_range            = "1-65535"
     destination_addresses = ["0.0.0.0/0", "::/0"]
-  }
-}
-
-resource "digitalocean_database_firewall" "postgres-firewall" {
-  cluster_id = digitalocean_database_cluster.postgres.id
-
-  rule {
-    type  = "tag"
-    value = "webserver"
   }
 }

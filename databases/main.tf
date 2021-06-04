@@ -1,6 +1,20 @@
+provider "digitalocean" {
+  token = var.do_token
+}
+
+terraform {
+  required_version = ">= 0.15.4"
+  required_providers {
+    digitalocean = {
+      source  = "digitalocean/digitalocean"
+      version = "~> 2.9.0"
+    }
+  }
+}
+
 resource "digitalocean_database_cluster" "postgres" {
   name       = var.pg_cluster_name
-  region     = var.droplet_region
+  region     = "nyc1"
   engine     = "pg"
   version    = var.pg_cluster_version
   size       = var.pg_cluster_size
