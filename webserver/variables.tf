@@ -43,7 +43,7 @@ variable "lb_name" {
 variable "firewall_name" {
   type        = string
   description = "name of firewall"
-  default     = "braum"
+  default     = "braums"
 }
 
 variable "troubleshooting" {

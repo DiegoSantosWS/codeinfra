@@ -1,4 +1,4 @@
-resource "digitalocean_firewall" "blog" {
+resource "digitalocean_firewall" "webws" {
   name        = var.firewall_name
   droplet_ids = digitalocean_droplet.web[*].id
 
