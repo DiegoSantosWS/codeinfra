@@ -1,3 +1,16 @@
+provider "digitalocean" {
+  token = var.do_token
+}
+
+terraform {
+  required_version = ">= 0.15.4"
+  required_providers {
+    digitalocean = {
+      source  = "digitalocean/digitalocean"
+      version = "~> 2.9.0"
+    }
+  }
+}
 
 resource "digitalocean_droplet" "web" {
   image    = var.droplet_image
@@ -16,9 +29,7 @@ resource "digitalocean_droplet" "web" {
 
   provisioner "remote-exec" {
     inline = [
-      # "docker run -d -p 80:8080 -e DATABASE_URL=${digitalocean_database_cluster.postgres.uri} -e ENVIRONMENT=${var.environment} igordcsouza/hc-terraform"
-      "curl -fsSL https://get.docker.com | sh",
-      "docker run -d -p 80:80 nginx"
+      "curl -fsSL https://get.docker.com | sh"
     ]
 
     connection {
@@ -29,6 +40,3 @@ resource "digitalocean_droplet" "web" {
   }
   count = length(var.droplet_environmets)
 }
-
-
-
